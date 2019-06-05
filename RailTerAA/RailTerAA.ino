@@ -6,6 +6,8 @@
 //- send command 'db#',returns status as a boolean
 //- send command 'dbAll', gets all statusses for all block
 
+#include <SerialCommands.h>
+
 //io
 int diTrainDetectedBlock0 = 22;
 int diTrainDetectedBlock1 = 23;
