@@ -44,3 +44,6 @@ int doTurnOutEnable = 47
 //globals
 bool trainDetectedBlock0 = false;
 bool trainDetectedBlock1 = false;
+
+bool switchTrainBlock0 = false;
+bool switchTrainBlock1 = false;

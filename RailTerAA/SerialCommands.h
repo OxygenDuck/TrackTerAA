@@ -35,7 +35,21 @@ void HandleSerialEvent(String a_inputString) //Main Function
   }
   else if (a_inputString.indexOf("sb") >= 0 && m_length == 3)
   {
+    m_index = a_inputString.indexOf("b");
 
+    //detect which input pin should be read
+    //check pin number
+    m_command = a_inputString.substring(m_index + 1);
+
+    switch (m_command.toInt())
+    {
+      case 0:
+        switchTrainBlock0 = digitalRead(doActivateBlock0);
+        break;
+      case 1:
+        switchTrainBlock1 = digitalRead(doActivateBlock1);
+        break;
+    }
   }
   else
   {
