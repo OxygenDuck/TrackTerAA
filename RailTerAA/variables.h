@@ -39,7 +39,7 @@ int doStraightAheadTurnout5 = 42;
 int doStraightAheadTurnout6 = 44;
 int doStraightAheadTurnout7 = 46;
 
-int doTurnOutEnable = 47
+int doTurnOutEnable = 47;
 
 //globals
 bool trainDetectedBlock0 = false;
