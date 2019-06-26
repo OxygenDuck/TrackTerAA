@@ -44,10 +44,10 @@ void HandleSerialEvent(String a_inputString) //Main Function
     switch (m_command.toInt())
     {
       case 0:
-        switchTrainBlock0 = digitalRead(doActivateBlock0);
+        switchTrainBlock0Adee = digitalRead(doActivateBlock0Adee);
         break;
       case 1:
-        switchTrainBlock1 = digitalRead(doActivateBlock1);
+        switchTrainBlock1Adee = digitalRead(doActivateBlock1Adee);
         break;
     }
   }
