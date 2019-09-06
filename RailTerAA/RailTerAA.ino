@@ -17,8 +17,15 @@ void setup()
 
 void loop()
 {
+  //testIo();
+}
 
-
+void testIo()
+{
+  digitalWrite(doActivateBlock0Adee, HIGH);
+  delay(1000);
+  digitalWrite(doActivateBlock0Adee, LOW);
+  delay(1000);
 }
 
 void serialEvent()//ISR

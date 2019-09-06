@@ -1,7 +1,9 @@
+#include "SerialCommands.h"
+
 //io
 int aoSpeedOnTrackAdee = 2;
 
-int doActivateBlock0Adee = 0;
+int doActivateBlock0Adee = 0; //sb0x on ; sb0o off
 int doActivateBlock1Adee = 1;
 int doActivateBlock2Adee = 2;
 int doActivateBlock3Adee = 3;
@@ -11,7 +13,7 @@ int doActivateBlock6Adee = 7;
 int doActivateBlock7Adee = 8;
 int doActivateBlock8Adee = 9;
 
-int diTrainDetectedBlock0Adee = 22;
+int diTrainDetectedBlock0Adee = 22;//db0 returns true or false
 int diTrainDetectedBlock1Adee = 23;
 int diTrainDetectedBlock2Adee = 24;
 int diTrainDetectedBlock3Adee = 25;
@@ -21,7 +23,7 @@ int diTrainDetectedBlock6Adee = 28;
 int diTrainDetectedBlock7Adee = 29;
 int diTrainDetectedBlock8Adee = 30;
 
-int doTakeTurnTurnout0Adee = 31;
+int doTakeTurnTurnout0Adee = 31;//sw0x straight sw0o turn
 int doTakeTurnTurnout1Adee = 33;
 int doTakeTurnTurnout2Adee = 35;
 int doTakeTurnTurnout3Adee = 37;
@@ -47,3 +49,4 @@ bool trainDetectedBlock1 = false;
 
 bool switchTrainBlock0Adee = false;
 bool switchTrainBlock1Adee = false;
+bool trainDetected = false;
