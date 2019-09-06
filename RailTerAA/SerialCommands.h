@@ -49,6 +49,8 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
   if (a_inputString.indexOf("sw") >= 0 && m_length == 4)
   {
+    digitalWrite(doTurnOutEnableAdee, HIGH);
+    
     m_index  = a_inputString.indexOf("w");
 
     m_command = a_inputString.substring(m_index + 1, m_index + 2);
@@ -57,23 +59,29 @@ void HandleSerialEvent(String a_inputString) //Main Function
     Serial.println("switching switch nr: " + m_command);
     Serial.println(m_command.toInt(), HEX);
 
-    digitalWrite(doTurnOutEnableAdee, HIGH);
-    delay(500);
+    delay(250);
 
     if (m_value == "x")
     {
       digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], HIGH);
+      digitalWrite(doTurnOutEnableAdee, LOW);
     }
-    else
+    else if(m_value == "y")
     {
       digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], LOW);
+      digitalWrite(doTurnOutEnableAdee, HIGH);
+    }else{
+      Serial.println("stop wrong command");
     }
-    
+    delay(250);
     digitalWrite(doTurnOutEnableAdee, LOW);
   }
   else
   {
     Serial.println("ERROR: command not recognized");
   }
-
 }
+
+//void switchSetTrack(){
+//  
+//}

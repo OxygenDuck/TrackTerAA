@@ -14,6 +14,7 @@
 void setup()
 {
   Serial.begin(115200);
+  Serial.println("rail ter aa started");
 
   for(int i = 0; i < 9; i++)
   {
