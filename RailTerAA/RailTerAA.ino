@@ -12,7 +12,6 @@
 void setup()
 {
 
-
 }
 
 void loop()
@@ -20,12 +19,15 @@ void loop()
   //testIo();
 }
 
+<<<<<<< Updated upstream
 void testIo()
 {
   digitalWrite(doActivateBlock0Adee, HIGH);
   delay(1000);
   digitalWrite(doActivateBlock0Adee, LOW);
   delay(1000);
+=======
+>>>>>>> Stashed changes
 }
 
 void serialEvent()//ISR
