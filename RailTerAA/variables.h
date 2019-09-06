@@ -1,45 +1,15 @@
-#include "SerialCommands.h"
+#define RAILVAR 1
 
 //io
-int aoSpeedOnTrackAdee = 2;
+int aoSpeedOnTrackPjan = 2;
 
-int doActivateBlock0Adee = 0; //sb0x on ; sb0o off
-int doActivateBlock1Adee = 1;
-int doActivateBlock2Adee = 2;
-int doActivateBlock3Adee = 3;
-int doActivateBlock4Adee = 4;
-int doActivateBlock5Adee = 6;
-int doActivateBlock6Adee = 7;
-int doActivateBlock7Adee = 8;
-int doActivateBlock8Adee = 9;
+int doActivateBlockAdee[9] = {0, 1, 2, 3, 4, 6, 7, 8, 9}; //sb0x on ; sb0o off
 
-int diTrainDetectedBlock0Adee = 22;//db0 returns true or false
-int diTrainDetectedBlock1Adee = 23;
-int diTrainDetectedBlock2Adee = 24;
-int diTrainDetectedBlock3Adee = 25;
-int diTrainDetectedBlock4Adee = 26;
-int diTrainDetectedBlock5Adee = 27;
-int diTrainDetectedBlock6Adee = 28;
-int diTrainDetectedBlock7Adee = 29;
-int diTrainDetectedBlock8Adee = 30;
+int diTrainDetectedBlockAdee[9] = {22, 23, 24, 25, 26, 27, 28, 29, 30}; //db0 returns true or false
 
-int doTakeTurnTurnout0Adee = 31;//sw0x straight sw0o turn
-int doTakeTurnTurnout1Adee = 33;
-int doTakeTurnTurnout2Adee = 35;
-int doTakeTurnTurnout3Adee = 37;
-int doTakeTurnTurnout4Adee = 39;
-int doTakeTurnTurnout5Adee = 41;
-int doTakeTurnTurnout6Adee = 43;
-int doTakeTurnTurnout7Adee = 45;
+int doTakeTurnTurnoutAdee[8] = {31, 33, 35, 37, 39, 41, 43, 45}; //sw0x straight sw0o turn
 
-int doStraightAheadTurnout0Adee = 32;
-int doStraightAheadTurnout1Adee = 34;
-int doStraightAheadTurnout2Adee = 36;
-int doStraightAheadTurnout3Adee = 38;
-int doStraightAheadTurnout4Adee = 40;
-int doStraightAheadTurnout5Adee = 42;
-int doStraightAheadTurnout6Adee = 44;
-int doStraightAheadTurnout7Adee = 46;
+//int doStraightAheadTurnoutAdee[8] = {32, 34, 36, 38, 40, 42, 44, 46}; //useless af
 
 int doTurnOutEnableAdee = 47;
 
@@ -50,3 +20,4 @@ bool trainDetectedBlock1 = false;
 bool switchTrainBlock0Adee = false;
 bool switchTrainBlock1Adee = false;
 bool trainDetected = false;
+
