@@ -2,6 +2,17 @@
 #include "variables.h"
 #endif
 
+void handleMotor(int a_outputValue){
+  int m_outputValueInA;
+  int m_outputValueInB;
+
+  m_outputValueInA = a_outputValue;
+  m_outputValueInB = 254 - a_outputValue;
+
+  analogWrite(aoSpeedOnTrackPjan, m_outputValueInA);
+  analogWrite(baseTrackValue, m_outputValueInB);
+}
+
 void HandleSerialEvent(String a_inputString) //Main Function
 {
   String m_command;
@@ -47,7 +58,7 @@ void HandleSerialEvent(String a_inputString) //Main Function
     }
   }
 
-  if (a_inputString.indexOf("sw") >= 0 && m_length == 4)
+  else if (a_inputString.indexOf("sw") >= 0 && m_length == 4)
   {
     digitalWrite(doTurnOutEnableAdee, HIGH);
     
@@ -76,11 +87,25 @@ void HandleSerialEvent(String a_inputString) //Main Function
     delay(250);
     digitalWrite(doTurnOutEnableAdee, LOW);
   }
+  
+  else if (a_inputString.indexOf("sp") >= 0 && m_length == 5)
+  {   
+    m_index  = a_inputString.indexOf("p");
+
+    m_command = a_inputString.substring(m_index + 1);
+
+    Serial.println("switching speed to: " + m_command);
+    Serial.println(m_command.toInt(), HEX);
+
+    handleMotor(m_command.toInt());
+    delay(250);
+  }
   else
   {
     Serial.println("ERROR: command not recognized");
   }
 }
+
 
 //void switchSetTrack(){
 //  

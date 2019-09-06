@@ -2,6 +2,7 @@
 
 //io
 int aoSpeedOnTrackPjan = 2;
+int baseTrackValue = 3;
 
 int doActivateBlockAdee[9] = {5, 6, 7, 8, 10, 11, 12, 14, 15}; //sb0x on ; sb0o off
 

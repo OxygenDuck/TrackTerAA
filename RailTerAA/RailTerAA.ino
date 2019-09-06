@@ -19,27 +19,30 @@ void setup()
   for(int i = 0; i < 9; i++)
   {
     pinMode(doActivateBlockAdee[i], OUTPUT);
+    digitalWrite(doActivateBlockAdee[i], LOW);
     pinMode(diTrainDetectedBlockAdee[i], INPUT);
     if (i < 8)
     {
       pinMode(doTakeTurnTurnoutAdee[i], OUTPUT);
+      digitalWrite(doTakeTurnTurnoutAdee[i],LOW);
     }
   }
-
   pinMode(doTurnOutEnableAdee, OUTPUT);
+  digitalWrite(doTurnOutEnableAdee, HIGH);
+  
 }
 
 void loop()
 {
-  //testIo();
+  testIo();
 }
 
 void testIo()
 {
-  digitalWrite(doActivateBlockAdee[0], HIGH);
-  delay(1000);
-  digitalWrite(doActivateBlockAdee[0], LOW);
-  delay(1000);
+  //digitalWrite(doActivateBlockAdee[0], HIGH);
+//  delay(1000);
+//  digitalWrite(doActivateBlockAdee[0], LOW);
+//  delay(1000);
 }
 
 void serialEvent()//ISR
