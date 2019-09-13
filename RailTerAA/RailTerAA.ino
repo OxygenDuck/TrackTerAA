@@ -24,9 +24,11 @@ void setup()
     if (i < 8)
     {
       pinMode(doTakeTurnTurnoutAdee[i], OUTPUT);
-      digitalWrite(doTakeTurnTurnoutAdee[i],LOW);
+      digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);
     }
   }
+  pinMode(aoSpeedOnTrackPjan, INPUT);
+  pinMode(baseTrackValue, INPUT);
   pinMode(doTurnOutEnableAdee, OUTPUT);
   digitalWrite(doTurnOutEnableAdee, HIGH);
   
@@ -35,6 +37,7 @@ void setup()
 void loop()
 {
   testIo();
+  readHalSensor();
 }
 
 void testIo()

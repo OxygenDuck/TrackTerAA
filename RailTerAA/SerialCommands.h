@@ -13,6 +13,19 @@ void handleMotor(int a_outputValue){
   analogWrite(baseTrackValue, m_outputValueInB);
 }
 
+void readHalSensor(){
+  for(int i = 0; i < 9; i++){
+    int halSensor = digitalRead(diTrainDetectedBlockAdee[i]);
+    if(halSensor == LOW){
+    // print out the state of the hal sensor:
+    Serial.println("sensor " + (String)diTrainDetectedBlockAdee[i] + " has been triggered");
+    //delay(1);
+    }else{
+      Serial.println("nothing");
+    }
+  }
+}
+
 void HandleSerialEvent(String a_inputString) //Main Function
 {
   String m_command;
@@ -27,6 +40,7 @@ void HandleSerialEvent(String a_inputString) //Main Function
   //detect which command
   if (a_inputString.indexOf("db") >= 0 && m_length == 3)
   {
+    bool trainInBlock = false;
     m_index = a_inputString.indexOf("b");
 
     //detect which input pin should be read
@@ -35,9 +49,9 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
     Serial.println("checking block nr: " + m_command);
 
-    trainDetected = diTrainDetectedBlockAdee[m_command.toInt()];
+    trainInBlock = digitalRead(diTrainDetectedBlockAdee[m_command.toInt()]);
 
-    //Serial.println("Train in block " + m_command + " detected : " + (String)trainDetected);
+    Serial.println("Train in block " + m_command + " detected : " + (String)trainInBlock);
   }
   else if (a_inputString.indexOf("sb") >= 0 && m_length == 4)
   {
@@ -50,17 +64,20 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
     if (m_value == "x")
     {
-      digitalWrite(doActivateBlockAdee[m_command.toInt()], HIGH);
-    }
-    else
-    {
       digitalWrite(doActivateBlockAdee[m_command.toInt()], LOW);
+    }
+    else if(m_value == "y")
+    {
+      digitalWrite(doActivateBlockAdee[m_command.toInt()], HIGH);
+    }else{
+      Serial.println("stop wrong command");
     }
   }
 
   else if (a_inputString.indexOf("sw") >= 0 && m_length == 4)
   {
     digitalWrite(doTurnOutEnableAdee, HIGH);
+
     
     m_index  = a_inputString.indexOf("w");
 
