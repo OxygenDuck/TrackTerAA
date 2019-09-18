@@ -24,7 +24,10 @@ void setup()
     if (i < 8)
     {
       pinMode(doTakeTurnTurnoutAdee[i], OUTPUT);
+      digitalWrite(doTakeTurnTurnoutAdee[i], LOW);
+      delay(250);
       digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);
+      
     }
   }
   pinMode(aoSpeedOnTrackPjan, INPUT);

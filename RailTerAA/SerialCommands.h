@@ -80,7 +80,7 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
   else if (a_inputString.indexOf("sw") >= 0 && m_length == 4)
   {
-    digitalWrite(doTurnOutEnableAdee, HIGH);
+    digitalWrite(doTurnOutEnableAdee, LOW);
 
     
     m_index  = a_inputString.indexOf("w");
@@ -101,12 +101,12 @@ void HandleSerialEvent(String a_inputString) //Main Function
     else if(m_value == "y")
     {
       digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], LOW);
-      digitalWrite(doTurnOutEnableAdee, HIGH);
+      digitalWrite(doTurnOutEnableAdee, LOW);
     }else{
       Serial.println("stop wrong command");
     }
     delay(250);
-    digitalWrite(doTurnOutEnableAdee, LOW);
+    digitalWrite(doTurnOutEnableAdee, HIGH);
   }
   
   else if (a_inputString.indexOf("sp") >= 0 && m_length == 5)
