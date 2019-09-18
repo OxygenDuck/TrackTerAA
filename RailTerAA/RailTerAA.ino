@@ -19,7 +19,7 @@ void setup()
   for(int i = 0; i < 9; i++)
   {
     pinMode(doActivateBlockAdee[i], OUTPUT);
-    digitalWrite(doActivateBlockAdee[i], LOW);
+    digitalWrite(doActivateBlockAdee[i], HIGH);
     pinMode(diTrainDetectedBlockAdee[i], INPUT);
     if (i < 8)
     {
@@ -36,7 +36,7 @@ void setup()
 
 void loop()
 {
-  testIo();
+  //testIo();
   readHalSensor();
 }
 

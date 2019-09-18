@@ -14,10 +14,9 @@ int doTakeTurnTurnoutAdee[8] = {37, 38, 39, 40, 41, 42, 43}; //sw0x straight sw0
 
 int doTurnOutEnableAdee = 47;
 
-//globals
-bool trainDetectedBlock0 = false;
-bool trainDetectedBlock1 = false;
-
-bool switchTrainBlock0Adee = false;
-bool switchTrainBlock1Adee = false;
-bool trainDetected = false;
+int trigPin1 = 46;
+int echoPin1 = 50;
+int trigPin2 = 45;
+int echoPin2 = 49;
+int trigPin3 = 44;
+int echoPin3 = 48;

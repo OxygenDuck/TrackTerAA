@@ -13,6 +13,10 @@ void handleMotor(int a_outputValue){
   analogWrite(baseTrackValue, m_outputValueInB);
 }
 
+void readUltraSonicSensor(){
+  
+}
+
 void readHalSensor(){
   for(int i = 0; i < 9; i++){
     int halSensor = digitalRead(diTrainDetectedBlockAdee[i]);
