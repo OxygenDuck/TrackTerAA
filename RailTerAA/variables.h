@@ -6,7 +6,7 @@ int baseTrackValue = 3;
 
 int doActivateBlockAdee[9] = {5, 6, 7, 8, 10, 11, 12, 14, 15}; //sb0x on ; sb0o off
 
-int diTrainDetectedBlockAdee[9] = {28, 29, 30, 31, 32, 33, 34, 35, 36}; //db0 returns true or false
+int diTrainDetectedBlockAdee[9] = {26,27,28, 29, 30, 31, 32, 33, 34}; //db0 returns true or false
 
 int doTakeTurnTurnoutAdee[8] = {37, 38, 39, 40, 41, 42, 43}; //sw0x straight sw0o turn
 
@@ -14,9 +14,5 @@ int doTakeTurnTurnoutAdee[8] = {37, 38, 39, 40, 41, 42, 43}; //sw0x straight sw0
 
 int doTurnOutEnableAdee = 47;
 
-int trigPin1 = 46;
-int echoPin1 = 50;
-int trigPin2 = 45;
-int echoPin2 = 49;
-int trigPin3 = 44;
-int echoPin3 = 48;
+int trigPin[3] = {46,45,44};
+int echoPin[3] = {50,49,48};

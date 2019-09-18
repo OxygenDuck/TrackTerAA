@@ -14,7 +14,27 @@ void handleMotor(int a_outputValue){
 }
 
 void readUltraSonicSensor(){
+  long duration;
+  int distance;
+  for(int i = 0; i < 3; i++){
+     // Clears the trigPin
+    digitalWrite(trigPin[i], LOW);
+    delayMicroseconds(2);
   
+    // Sets the trigPin on HIGH state for 10 micro seconds
+    digitalWrite(trigPin[i], HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin[i], LOW);
+  
+    // Reads the echoPin, returns the sound wave travel time in microseconds
+    duration = pulseIn(echoPin[i], HIGH);
+  
+    // Calculating the distance
+    distance = (duration/2) / 29.1;
+  
+    // Prints the distance on the Serial Monitor
+    Serial.println((String)trigPin[i] + " has a Distance of: "  + (String)distance);
+  }
 }
 
 void readHalSensor(){
@@ -81,7 +101,6 @@ void HandleSerialEvent(String a_inputString) //Main Function
   else if (a_inputString.indexOf("sw") >= 0 && m_length == 4)
   {
     digitalWrite(doTurnOutEnableAdee, LOW);
-
     
     m_index  = a_inputString.indexOf("w");
 

@@ -16,6 +16,10 @@ void setup()
   Serial.begin(115200);
   Serial.println("rail ter aa started");
 
+  for(int i = 0; i <3; i++){
+    pinMode(trigPin[i], OUTPUT);
+    pinMode(echoPin[i], INPUT);
+  }
   for(int i = 0; i < 9; i++)
   {
     pinMode(doActivateBlockAdee[i], OUTPUT);
@@ -26,8 +30,7 @@ void setup()
       pinMode(doTakeTurnTurnoutAdee[i], OUTPUT);
       digitalWrite(doTakeTurnTurnoutAdee[i], LOW);
       delay(250);
-      digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);
-      
+      digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);    
     }
   }
   pinMode(aoSpeedOnTrackPjan, INPUT);
@@ -40,7 +43,11 @@ void setup()
 void loop()
 {
   //testIo();
-  readHalSensor();
+//  readHalSensor();
+//  Serial.println("  ");
+//  delay(500);
+  readUltraSonicSensor();
+  delay(500);
 }
 
 void testIo()
