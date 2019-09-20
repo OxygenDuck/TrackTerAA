@@ -4,7 +4,7 @@
 int aoSpeedOnTrackPjan = 2;
 int baseTrackValue = 3;
 
-int doActivateBlockAdee[9] = {5, 6, 7, 8, 10, 11, 12, 14, 15}; //sb0x on ; sb0o off
+int doActivateBlockAdee[9] = {5, 6, 7, 11, 10, 8, 12, 14, 15}; //sb0x on ; sb0o off
 
 int diTrainDetectedBlockAdee[9] = {26,27,28, 29, 30, 31, 32, 33, 34}; //db0 returns true or false
 

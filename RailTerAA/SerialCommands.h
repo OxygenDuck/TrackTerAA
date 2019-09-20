@@ -2,6 +2,9 @@
 #include "variables.h"
 #endif
 
+int trainSpeed = 0;
+int HalSensorTriggered;
+
 void handleMotor(int a_outputValue){
   int m_outputValueInA;
   int m_outputValueInB;
@@ -11,6 +14,8 @@ void handleMotor(int a_outputValue){
 
   analogWrite(aoSpeedOnTrackPjan, m_outputValueInA);
   analogWrite(baseTrackValue, m_outputValueInB);
+
+  trainSpeed = a_outputValue;
 }
 
 void readUltraSonicSensor(){
@@ -40,12 +45,52 @@ void readUltraSonicSensor(){
 void readHalSensor(){
   for(int i = 0; i < 9; i++){
     int halSensor = digitalRead(diTrainDetectedBlockAdee[i]);
+    HalSensorTriggered = halSensor;
     if(halSensor == LOW){
     // print out the state of the hal sensor:
-    Serial.println("sensor " + (String)diTrainDetectedBlockAdee[i] + " has been triggered");
+    //Serial.println("sensor " + (String)diTrainDetectedBlockAdee[i] + " has been triggered");
     //delay(1);
     }else{
-      Serial.println("nothing");
+      //Serial.println("nothing");
+    }
+  }
+}
+
+void activateBlockOnTrainDetect(){
+  if(trainSpeed < 127){
+    for (int i = 0; i < 9; i++){
+      if(HalSensorTriggered == diTrainDetectedBlockAdee[i]){
+        if(i < 8){
+          digitalWrite(doActivateBlockAdee[i+1], LOW);
+          digitalWrite(doActivateBlockAdee[i-1], HIGH);
+        }
+        if(i == 8){
+            digitalWrite(doActivateBlockAdee[0], HIGH);
+        }
+        if(i == 0){
+          digitalWrite(doActivateBlockAdee[8], LOW);
+        }
+      }else{
+        digitalWrite(doActivateBlockAdee[i], HIGH);
+      }
+    }
+  }
+  if(trainSpeed > 127){
+    for (int i = 0; i < 9; i++){
+      if(HalSensorTriggered == diTrainDetectedBlockAdee[i]){
+        if(i < 8){
+          digitalWrite(doActivateBlockAdee[i-1], LOW);
+          digitalWrite(doActivateBlockAdee[i+1], HIGH);
+        }
+        if(i == 8){
+            digitalWrite(doActivateBlockAdee[0], LOW);
+        }
+        if(i == 0){
+          digitalWrite(doActivateBlockAdee[8], HIGH);
+        }
+      }else{
+        digitalWrite(doActivateBlockAdee[i], HIGH);
+      }
     }
   }
 }
@@ -128,7 +173,7 @@ void HandleSerialEvent(String a_inputString) //Main Function
     digitalWrite(doTurnOutEnableAdee, HIGH);
   }
   
-  else if (a_inputString.indexOf("sp") >= 0 && m_length == 5)
+  else if (a_inputString.indexOf("sp") >= 0 && m_length == 5 || a_inputString.indexOf("sp") >= 0 && m_length == 4)
   {   
     m_index  = a_inputString.indexOf("p");
 
@@ -139,6 +184,7 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
     handleMotor(m_command.toInt());
     delay(250);
+    Serial.println(m_command);
   }
   else
   {

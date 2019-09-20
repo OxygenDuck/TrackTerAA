@@ -31,23 +31,27 @@ void setup()
       digitalWrite(doTakeTurnTurnoutAdee[i], LOW);
       delay(250);
       digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);    
+      delay(250);
+      digitalWrite(doActivateBlockAdee[i], LOW);
+      delay(250);
+      digitalWrite(doActivateBlockAdee[i], HIGH);
     }
   }
-  pinMode(aoSpeedOnTrackPjan, INPUT);
-  pinMode(baseTrackValue, INPUT);
+  pinMode(aoSpeedOnTrackPjan, OUTPUT);
+  pinMode(baseTrackValue, OUTPUT);
   pinMode(doTurnOutEnableAdee, OUTPUT);
   digitalWrite(doTurnOutEnableAdee, HIGH);
-  
 }
 
 void loop()
 {
   //testIo();
-//  readHalSensor();
-//  Serial.println("  ");
-//  delay(500);
-  readUltraSonicSensor();
-  delay(500);
+  //readHalSensor();
+  //  Serial.println("  ");
+  //  delay(500);
+  //readUltraSonicSensor();
+  //activateBlockOnTrainDetect();
+  //delay(500);
 }
 
 void testIo()
