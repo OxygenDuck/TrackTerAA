@@ -2,8 +2,8 @@
 #include "variables.h"
 #endif
 
-int trainSpeed = 0;
-int HalSensorTriggered;
+int trainSpeedAdee = 0;
+int HalSensorTriggeredAdee;
 
 void handleMotor(int a_outputValue){
   int m_outputValueInA;
@@ -13,53 +13,15 @@ void handleMotor(int a_outputValue){
   m_outputValueInB = 254 - a_outputValue;
 
   analogWrite(aoSpeedOnTrackPjan, m_outputValueInA);
-  analogWrite(baseTrackValue, m_outputValueInB);
+  analogWrite(baseTrackValueAdee, m_outputValueInB);
 
-  trainSpeed = a_outputValue;
-}
-
-void readUltraSonicSensor(){
-  long duration;
-  int distance;
-  for(int i = 0; i < 3; i++){
-     // Clears the trigPin
-    digitalWrite(trigPin[i], LOW);
-    delayMicroseconds(2);
-  
-    // Sets the trigPin on HIGH state for 10 micro seconds
-    digitalWrite(trigPin[i], HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin[i], LOW);
-  
-    // Reads the echoPin, returns the sound wave travel time in microseconds
-    duration = pulseIn(echoPin[i], HIGH);
-  
-    // Calculating the distance
-    distance = (duration/2) / 29.1;
-  
-    // Prints the distance on the Serial Monitor
-    Serial.println((String)trigPin[i] + " has a Distance of: "  + (String)distance);
-  }
-}
-
-void readHalSensor(){
-  for(int i = 0; i < 9; i++){
-    int halSensor = digitalRead(diTrainDetectedBlockAdee[i]);
-    HalSensorTriggered = halSensor;
-    if(halSensor == LOW){
-    // print out the state of the hal sensor:
-    //Serial.println("sensor " + (String)diTrainDetectedBlockAdee[i] + " has been triggered");
-    //delay(1);
-    }else{
-      //Serial.println("nothing");
-    }
-  }
+  trainSpeedAdee = a_outputValue;
 }
 
 void activateBlockOnTrainDetect(){
-  if(trainSpeed < 127){
+  if(trainSpeedAdee < 127){
     for (int i = 0; i < 9; i++){
-      if(HalSensorTriggered == diTrainDetectedBlockAdee[i]){
+      if(HalSensorTriggeredAdee == diTrainDetectedBlockAdee[i]){
         if(i < 8){
           digitalWrite(doActivateBlockAdee[i+1], LOW);
           digitalWrite(doActivateBlockAdee[i-1], HIGH);
@@ -75,9 +37,9 @@ void activateBlockOnTrainDetect(){
       }
     }
   }
-  if(trainSpeed > 127){
+  if(trainSpeedAdee > 127){
     for (int i = 0; i < 9; i++){
-      if(HalSensorTriggered == diTrainDetectedBlockAdee[i]){
+      if(HalSensorTriggeredAdee == diTrainDetectedBlockAdee[i]){
         if(i < 8){
           digitalWrite(doActivateBlockAdee[i-1], LOW);
           digitalWrite(doActivateBlockAdee[i+1], HIGH);
@@ -91,6 +53,45 @@ void activateBlockOnTrainDetect(){
       }else{
         digitalWrite(doActivateBlockAdee[i], HIGH);
       }
+    }
+  }
+}
+
+void readUltraSonicSensor(){
+  long durationAdee;
+  int distanceAdee;
+  for(int i = 0; i < 3; i++){
+     // Clears the trigPin
+    digitalWrite(trigPinAdee[i], LOW);
+    delayMicroseconds(2);
+  
+    // Sets the trigPin on HIGH state for 10 micro seconds
+    digitalWrite(trigPinAdee[i], HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPinAdee[i], LOW);
+  
+    // Reads the echoPin, returns the sound wave travel time in microseconds
+    durationAdee = pulseIn(echoPinAdee[i], HIGH);
+  
+    // Calculating the distance
+    distanceAdee = (durationAdee/2) / 29.1;
+  
+    // Prints the distance on the Serial Monitor
+    Serial.println((String)trigPinAdee[i] + " has a Distance of: "  + (String)distanceAdee);
+  }
+}
+
+void readHalSensor(){
+  for(int i = 0; i < 9; i++){
+    int halSensorAdee = digitalRead(diTrainDetectedBlockAdee[i]);
+    HalSensorTriggeredAdee = halSensorAdee;
+    if(halSensorAdee == LOW){
+      activateBlockOnTrainDetect();
+    // print out the state of the hal sensor:
+    //Serial.println("sensor " + (String)diTrainDetectedBlockAdee[i] + " has been triggered");
+    //delay(1);
+    }else{
+      //Serial.println("nothing");
     }
   }
 }
@@ -109,7 +110,7 @@ void HandleSerialEvent(String a_inputString) //Main Function
   //detect which command
   if (a_inputString.indexOf("db") >= 0 && m_length == 3)
   {
-    bool trainInBlock = false;
+    bool trainInBlockAdee = false;
     m_index = a_inputString.indexOf("b");
 
     //detect which input pin should be read
@@ -118,9 +119,9 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
     Serial.println("checking block nr: " + m_command);
 
-    trainInBlock = digitalRead(diTrainDetectedBlockAdee[m_command.toInt()]);
+    trainInBlockAdee = digitalRead(diTrainDetectedBlockAdee[m_command.toInt()]);
 
-    Serial.println("Train in block " + m_command + " detected : " + (String)trainInBlock);
+    Serial.println("Train in block " + m_command + " detected : " + (String)trainInBlockAdee);
   }
   else if (a_inputString.indexOf("sb") >= 0 && m_length == 4)
   {

@@ -17,8 +17,8 @@ void setup()
   Serial.println("rail ter aa started");
 
   for(int i = 0; i <3; i++){
-    pinMode(trigPin[i], OUTPUT);
-    pinMode(echoPin[i], INPUT);
+    pinMode(trigPinAdee[i], OUTPUT);
+    pinMode(echoPinAdee[i], INPUT);
   }
   for(int i = 0; i < 9; i++)
   {
@@ -38,7 +38,7 @@ void setup()
     }
   }
   pinMode(aoSpeedOnTrackPjan, OUTPUT);
-  pinMode(baseTrackValue, OUTPUT);
+  pinMode(baseTrackValueAdee, OUTPUT);
   pinMode(doTurnOutEnableAdee, OUTPUT);
   digitalWrite(doTurnOutEnableAdee, HIGH);
 }
