@@ -11,6 +11,9 @@
 #endif
 #include "SerialCommands.h"
 
+unsigned long previousMillis = 0;
+const long interval = 250; 
+
 void setup()
 {
   Serial.begin(115200);
@@ -45,21 +48,14 @@ void setup()
 
 void loop()
 {
-  //testIo();
-  //readHalSensor();
-  //  Serial.println("  ");
-  //  delay(500);
-  //readUltraSonicSensor();
-  //activateBlockOnTrainDetect();
-  //delay(500);
-}
-
-void testIo()
-{
-  //digitalWrite(doActivateBlockAdee[0], HIGH);
-//  delay(1000);
-//  digitalWrite(doActivateBlockAdee[0], LOW);
-//  delay(1000);
+  unsigned long currentMillis = millis();
+  
+  if (currentMillis - previousMillis >= interval) {
+    // save the last time the delay fired
+    previousMillis = currentMillis;
+    readHalSensor(); 
+    readUltraSonicSensor();
+  }
 }
 
 void serialEvent()//ISR
