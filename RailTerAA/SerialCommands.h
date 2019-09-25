@@ -78,6 +78,7 @@ void readUltraSonicSensor(){
   
     // Prints the distance on the Serial Monitor
     Serial.println((String)trigPinAdee[i] + " has a Distance of: "  + (String)distanceAdee);
+    Serial.println("  ");
     if(distanceAdee == 50){
       trainSpeedAdee = 0;
     }
@@ -89,11 +90,11 @@ void readHalSensor(){
     int halSensorAdee = digitalRead(diTrainDetectedBlockAdee[i]);
     HalSensorTriggeredAdee = halSensorAdee;
     if(halSensorAdee == LOW){
-      activateBlockOnTrainDetect();
+      //activateBlockOnTrainDetect();
     // print out the state of the hal sensor:
     Serial.println("sensor " + (String)diTrainDetectedBlockAdee[i] + " has been triggered");
     }else{
-      Serial.println("nothing");
+      //Serial.println("nothing");
     }
   }
 }

@@ -24,7 +24,7 @@ namespace RailTerAaControllerPjan
         public form1()
         {
             InitializeComponent();
-            serialPortPjan.PortName = "COM4"; //TODO: DETECT ACTUAL SERIAL PORT;
+            serialPortPjan.PortName = "COM10"; //TODO: DETECT ACTUAL SERIAL PORT;
             serialPortPjan.BaudRate = 115200;
             serialPortPjan.Open();
 

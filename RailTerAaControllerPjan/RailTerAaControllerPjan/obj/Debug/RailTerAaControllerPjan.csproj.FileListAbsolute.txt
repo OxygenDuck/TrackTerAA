@@ -8,3 +8,13 @@ c:\users\janssen\source\repos\RailTerAaControllerPjan\RailTerAaControllerPjan\ob
 c:\users\janssen\source\repos\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.csproj.CoreCompileInputs.cache
 c:\users\janssen\source\repos\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.exe
 c:\users\janssen\source\repos\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.pdb
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\bin\Debug\RailTerAaControllerPjan.exe.config
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\bin\Debug\RailTerAaControllerPjan.exe
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\bin\Debug\RailTerAaControllerPjan.pdb
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.csprojAssemblyReference.cache
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.form1.resources
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.Properties.Resources.resources
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.csproj.GenerateResource.cache
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.csproj.CoreCompileInputs.cache
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.exe
+D:\github\TrackTerAA\RailTerAaControllerPjan\RailTerAaControllerPjan\obj\Debug\RailTerAaControllerPjan.pdb

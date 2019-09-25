@@ -12,7 +12,7 @@
 #include "SerialCommands.h"
 
 unsigned long previousMillis = 0;
-const long interval = 250; 
+const long interval = 25; 
 
 void setup()
 {
@@ -54,6 +54,7 @@ void loop()
     // save the last time the delay fired
     previousMillis = currentMillis;
     readHalSensor(); 
+    //Serial.println((String)currentMillis);
     readUltraSonicSensor();
   }
 }

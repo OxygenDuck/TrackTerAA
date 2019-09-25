@@ -65,10 +65,10 @@
             // 
             // btnTurnout1Pjan
             // 
-            this.btnTurnout1Pjan.Location = new System.Drawing.Point(259, 398);
-            this.btnTurnout1Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout1Pjan.Location = new System.Drawing.Point(345, 490);
+            this.btnTurnout1Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout1Pjan.Name = "btnTurnout1Pjan";
-            this.btnTurnout1Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout1Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout1Pjan.TabIndex = 0;
             this.btnTurnout1Pjan.Tag = "0";
             this.btnTurnout1Pjan.Text = "Turnout 1";
@@ -77,10 +77,10 @@
             // 
             // btnTurnout2Pjan
             // 
-            this.btnTurnout2Pjan.Location = new System.Drawing.Point(774, 398);
-            this.btnTurnout2Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout2Pjan.Location = new System.Drawing.Point(1032, 490);
+            this.btnTurnout2Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout2Pjan.Name = "btnTurnout2Pjan";
-            this.btnTurnout2Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout2Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout2Pjan.TabIndex = 1;
             this.btnTurnout2Pjan.Tag = "1";
             this.btnTurnout2Pjan.Text = "Turnout 2";
@@ -89,10 +89,10 @@
             // 
             // btnTurnout3Pjan
             // 
-            this.btnTurnout3Pjan.Location = new System.Drawing.Point(774, 38);
-            this.btnTurnout3Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout3Pjan.Location = new System.Drawing.Point(1032, 47);
+            this.btnTurnout3Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout3Pjan.Name = "btnTurnout3Pjan";
-            this.btnTurnout3Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout3Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout3Pjan.TabIndex = 3;
             this.btnTurnout3Pjan.Tag = "2";
             this.btnTurnout3Pjan.Text = "Turnout 3";
@@ -101,10 +101,10 @@
             // 
             // btnTurnout4Pjan
             // 
-            this.btnTurnout4Pjan.Location = new System.Drawing.Point(259, 38);
-            this.btnTurnout4Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout4Pjan.Location = new System.Drawing.Point(345, 47);
+            this.btnTurnout4Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout4Pjan.Name = "btnTurnout4Pjan";
-            this.btnTurnout4Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout4Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout4Pjan.TabIndex = 2;
             this.btnTurnout4Pjan.Tag = "3";
             this.btnTurnout4Pjan.Text = "Turnout 4";
@@ -113,10 +113,10 @@
             // 
             // btnTurnout7Pjan
             // 
-            this.btnTurnout7Pjan.Location = new System.Drawing.Point(728, 356);
-            this.btnTurnout7Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout7Pjan.Location = new System.Drawing.Point(971, 438);
+            this.btnTurnout7Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout7Pjan.Name = "btnTurnout7Pjan";
-            this.btnTurnout7Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout7Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout7Pjan.TabIndex = 4;
             this.btnTurnout7Pjan.Tag = "6";
             this.btnTurnout7Pjan.Text = "Turnout 7";
@@ -125,10 +125,10 @@
             // 
             // btnTurnout6Pjan
             // 
-            this.btnTurnout6Pjan.Location = new System.Drawing.Point(679, 314);
-            this.btnTurnout6Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout6Pjan.Location = new System.Drawing.Point(905, 386);
+            this.btnTurnout6Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout6Pjan.Name = "btnTurnout6Pjan";
-            this.btnTurnout6Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout6Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout6Pjan.TabIndex = 5;
             this.btnTurnout6Pjan.Tag = "5";
             this.btnTurnout6Pjan.Text = "Turnout 6";
@@ -137,10 +137,10 @@
             // 
             // btnTurnout5Pjan
             // 
-            this.btnTurnout5Pjan.Location = new System.Drawing.Point(638, 272);
-            this.btnTurnout5Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTurnout5Pjan.Location = new System.Drawing.Point(851, 335);
+            this.btnTurnout5Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTurnout5Pjan.Name = "btnTurnout5Pjan";
-            this.btnTurnout5Pjan.Size = new System.Drawing.Size(71, 38);
+            this.btnTurnout5Pjan.Size = new System.Drawing.Size(95, 47);
             this.btnTurnout5Pjan.TabIndex = 6;
             this.btnTurnout5Pjan.Tag = "4";
             this.btnTurnout5Pjan.Text = "Turnout 5";
@@ -149,10 +149,10 @@
             // 
             // btnBlock1Pjan
             // 
-            this.btnBlock1Pjan.Location = new System.Drawing.Point(519, 403);
-            this.btnBlock1Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock1Pjan.Location = new System.Drawing.Point(692, 496);
+            this.btnBlock1Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock1Pjan.Name = "btnBlock1Pjan";
-            this.btnBlock1Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock1Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock1Pjan.TabIndex = 7;
             this.btnBlock1Pjan.Tag = "0";
             this.btnBlock1Pjan.Text = "Block 1";
@@ -161,10 +161,10 @@
             // 
             // btnBlock2Pjan
             // 
-            this.btnBlock2Pjan.Location = new System.Drawing.Point(11, 222);
-            this.btnBlock2Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock2Pjan.Location = new System.Drawing.Point(15, 273);
+            this.btnBlock2Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock2Pjan.Name = "btnBlock2Pjan";
-            this.btnBlock2Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock2Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock2Pjan.TabIndex = 8;
             this.btnBlock2Pjan.Tag = "1";
             this.btnBlock2Pjan.Text = "Block 2";
@@ -173,10 +173,10 @@
             // 
             // btnBlock3Pjan
             // 
-            this.btnBlock3Pjan.Location = new System.Drawing.Point(509, 41);
-            this.btnBlock3Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock3Pjan.Location = new System.Drawing.Point(679, 50);
+            this.btnBlock3Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock3Pjan.Name = "btnBlock3Pjan";
-            this.btnBlock3Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock3Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock3Pjan.TabIndex = 9;
             this.btnBlock3Pjan.Tag = "2";
             this.btnBlock3Pjan.Text = "Block 3";
@@ -185,10 +185,10 @@
             // 
             // btnBlock4Pjan
             // 
-            this.btnBlock4Pjan.Location = new System.Drawing.Point(1017, 222);
-            this.btnBlock4Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock4Pjan.Location = new System.Drawing.Point(1356, 273);
+            this.btnBlock4Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock4Pjan.Name = "btnBlock4Pjan";
-            this.btnBlock4Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock4Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock4Pjan.TabIndex = 10;
             this.btnBlock4Pjan.Tag = "3";
             this.btnBlock4Pjan.Text = "Block 4";
@@ -197,10 +197,10 @@
             // 
             // btnBlock5Pjan
             // 
-            this.btnBlock5Pjan.Location = new System.Drawing.Point(519, 366);
-            this.btnBlock5Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock5Pjan.Location = new System.Drawing.Point(692, 450);
+            this.btnBlock5Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock5Pjan.Name = "btnBlock5Pjan";
-            this.btnBlock5Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock5Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock5Pjan.TabIndex = 11;
             this.btnBlock5Pjan.Tag = "4";
             this.btnBlock5Pjan.Text = "Block 5";
@@ -209,10 +209,10 @@
             // 
             // btnBlock6Pjan
             // 
-            this.btnBlock6Pjan.Location = new System.Drawing.Point(519, 222);
-            this.btnBlock6Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock6Pjan.Location = new System.Drawing.Point(692, 273);
+            this.btnBlock6Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock6Pjan.Name = "btnBlock6Pjan";
-            this.btnBlock6Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock6Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock6Pjan.TabIndex = 12;
             this.btnBlock6Pjan.Tag = "5";
             this.btnBlock6Pjan.Text = "Block 6";
@@ -221,10 +221,10 @@
             // 
             // btnBlock7Pjan
             // 
-            this.btnBlock7Pjan.Location = new System.Drawing.Point(509, 78);
-            this.btnBlock7Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock7Pjan.Location = new System.Drawing.Point(679, 96);
+            this.btnBlock7Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock7Pjan.Name = "btnBlock7Pjan";
-            this.btnBlock7Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock7Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock7Pjan.TabIndex = 13;
             this.btnBlock7Pjan.Tag = "6";
             this.btnBlock7Pjan.Text = "Block 7";
@@ -233,10 +233,10 @@
             // 
             // btnBlock8Pjan
             // 
-            this.btnBlock8Pjan.Location = new System.Drawing.Point(519, 272);
-            this.btnBlock8Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock8Pjan.Location = new System.Drawing.Point(692, 335);
+            this.btnBlock8Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock8Pjan.Name = "btnBlock8Pjan";
-            this.btnBlock8Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock8Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock8Pjan.TabIndex = 14;
             this.btnBlock8Pjan.Tag = "7";
             this.btnBlock8Pjan.Text = "Block 8";
@@ -245,10 +245,10 @@
             // 
             // btnBlock9Pjan
             // 
-            this.btnBlock9Pjan.Location = new System.Drawing.Point(519, 314);
-            this.btnBlock9Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBlock9Pjan.Location = new System.Drawing.Point(692, 386);
+            this.btnBlock9Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBlock9Pjan.Name = "btnBlock9Pjan";
-            this.btnBlock9Pjan.Size = new System.Drawing.Size(60, 33);
+            this.btnBlock9Pjan.Size = new System.Drawing.Size(80, 41);
             this.btnBlock9Pjan.TabIndex = 15;
             this.btnBlock9Pjan.Tag = "8";
             this.btnBlock9Pjan.Text = "Block 9";
@@ -258,91 +258,92 @@
             // pnlSensor3Pjan
             // 
             this.pnlSensor3Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor3Pjan.Location = new System.Drawing.Point(573, 47);
-            this.pnlSensor3Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor3Pjan.Location = new System.Drawing.Point(764, 58);
+            this.pnlSensor3Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor3Pjan.Name = "pnlSensor3Pjan";
-            this.pnlSensor3Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor3Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor3Pjan.TabIndex = 16;
             // 
             // pnlSensor1Pjan
             // 
             this.pnlSensor1Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor1Pjan.Location = new System.Drawing.Point(498, 409);
-            this.pnlSensor1Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor1Pjan.Location = new System.Drawing.Point(664, 503);
+            this.pnlSensor1Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor1Pjan.Name = "pnlSensor1Pjan";
-            this.pnlSensor1Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor1Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor1Pjan.TabIndex = 17;
             // 
             // pnlSensor6Pjan
             // 
             this.pnlSensor6Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor6Pjan.Location = new System.Drawing.Point(496, 229);
-            this.pnlSensor6Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor6Pjan.Location = new System.Drawing.Point(661, 282);
+            this.pnlSensor6Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor6Pjan.Name = "pnlSensor6Pjan";
-            this.pnlSensor6Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor6Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor6Pjan.TabIndex = 17;
             // 
             // pnlSensor4Pjan
             // 
             this.pnlSensor4Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor4Pjan.Location = new System.Drawing.Point(994, 229);
-            this.pnlSensor4Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor4Pjan.Location = new System.Drawing.Point(1325, 282);
+            this.pnlSensor4Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor4Pjan.Name = "pnlSensor4Pjan";
-            this.pnlSensor4Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor4Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor4Pjan.TabIndex = 17;
             // 
             // pnlSensor2Pjan
             // 
             this.pnlSensor2Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor2Pjan.Location = new System.Drawing.Point(75, 229);
-            this.pnlSensor2Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor2Pjan.Location = new System.Drawing.Point(100, 282);
+            this.pnlSensor2Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor2Pjan.Name = "pnlSensor2Pjan";
-            this.pnlSensor2Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor2Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor2Pjan.TabIndex = 18;
             // 
             // pnlSensor7Pjan
             // 
             this.pnlSensor7Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor7Pjan.Location = new System.Drawing.Point(573, 83);
-            this.pnlSensor7Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor7Pjan.Location = new System.Drawing.Point(764, 102);
+            this.pnlSensor7Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor7Pjan.Name = "pnlSensor7Pjan";
-            this.pnlSensor7Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor7Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor7Pjan.TabIndex = 17;
             // 
             // pnlSensor8Pjan
             // 
             this.pnlSensor8Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor8Pjan.Location = new System.Drawing.Point(496, 278);
-            this.pnlSensor8Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor8Pjan.Location = new System.Drawing.Point(661, 342);
+            this.pnlSensor8Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor8Pjan.Name = "pnlSensor8Pjan";
-            this.pnlSensor8Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor8Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor8Pjan.TabIndex = 19;
             // 
             // pnlSensor9Pjan
             // 
             this.pnlSensor9Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor9Pjan.Location = new System.Drawing.Point(496, 319);
-            this.pnlSensor9Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor9Pjan.Location = new System.Drawing.Point(661, 393);
+            this.pnlSensor9Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor9Pjan.Name = "pnlSensor9Pjan";
-            this.pnlSensor9Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor9Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor9Pjan.TabIndex = 20;
             // 
             // pnlSensor5Pjan
             // 
             this.pnlSensor5Pjan.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlSensor5Pjan.Location = new System.Drawing.Point(498, 371);
-            this.pnlSensor5Pjan.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSensor5Pjan.Location = new System.Drawing.Point(664, 457);
+            this.pnlSensor5Pjan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlSensor5Pjan.Name = "pnlSensor5Pjan";
-            this.pnlSensor5Pjan.Size = new System.Drawing.Size(19, 20);
+            this.pnlSensor5Pjan.Size = new System.Drawing.Size(25, 25);
             this.pnlSensor5Pjan.TabIndex = 21;
             // 
             // rtbSerialMonitorPjan
             // 
             this.rtbSerialMonitorPjan.BackColor = System.Drawing.Color.Black;
             this.rtbSerialMonitorPjan.ForeColor = System.Drawing.Color.White;
-            this.rtbSerialMonitorPjan.Location = new System.Drawing.Point(11, 462);
+            this.rtbSerialMonitorPjan.Location = new System.Drawing.Point(15, 569);
+            this.rtbSerialMonitorPjan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbSerialMonitorPjan.Name = "rtbSerialMonitorPjan";
-            this.rtbSerialMonitorPjan.Size = new System.Drawing.Size(298, 207);
+            this.rtbSerialMonitorPjan.Size = new System.Drawing.Size(396, 254);
             this.rtbSerialMonitorPjan.TabIndex = 22;
             this.rtbSerialMonitorPjan.Text = "";
             // 
@@ -377,7 +378,7 @@
             // 
             // form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1081, 681);
@@ -410,7 +411,7 @@
             this.Controls.Add(this.btnTurnout4Pjan);
             this.Controls.Add(this.btnTurnout2Pjan);
             this.Controls.Add(this.btnTurnout1Pjan);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "form1";
             this.Tag = "0";
             this.Text = "RailTerAA Controller";
