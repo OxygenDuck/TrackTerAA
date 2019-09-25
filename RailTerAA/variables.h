@@ -14,5 +14,5 @@ int doTakeTurnTurnoutAdee[8] = {37, 38, 39, 40, 41, 42, 43}; //sw0x straight sw0
 
 int doTurnOutEnableAdee = 47;
 
-int trigPinAdee[3] = {46,45,44};
-int echoPinAdee[3] = {50,49,48};
+int trigPinAdee[3] = {45,44}; //46
+int echoPinAdee[3] = {49,48}; //50

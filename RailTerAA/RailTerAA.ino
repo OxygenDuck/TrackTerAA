@@ -18,6 +18,9 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println("rail ter aa started");
+  pinMode(aoSpeedOnTrackPjan, OUTPUT);
+  pinMode(baseTrackValueAdee, OUTPUT);
+  pinMode(doTurnOutEnableAdee, OUTPUT);
 
   for(int i = 0; i <3; i++){
     pinMode(trigPinAdee[i], OUTPUT);
@@ -27,23 +30,21 @@ void setup()
   {
     pinMode(doActivateBlockAdee[i], OUTPUT);
     digitalWrite(doActivateBlockAdee[i], HIGH);
+    pinMode(doTakeTurnTurnoutAdee[i], OUTPUT);
     pinMode(diTrainDetectedBlockAdee[i], INPUT);
+    digitalWrite(doTurnOutEnableAdee, LOW);
     if (i < 8)
     {
-      pinMode(doTakeTurnTurnoutAdee[i], OUTPUT);
       digitalWrite(doTakeTurnTurnoutAdee[i], LOW);
       delay(250);
-      digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);    
+      digitalWrite(doTakeTurnTurnoutAdee[i], HIGH);   
       delay(250);
       digitalWrite(doActivateBlockAdee[i], LOW);
       delay(250);
       digitalWrite(doActivateBlockAdee[i], HIGH);
     }
+    digitalWrite(doTurnOutEnableAdee, HIGH); 
   }
-  pinMode(aoSpeedOnTrackPjan, OUTPUT);
-  pinMode(baseTrackValueAdee, OUTPUT);
-  pinMode(doTurnOutEnableAdee, OUTPUT);
-  digitalWrite(doTurnOutEnableAdee, HIGH);
 }
 
 void loop()

@@ -60,7 +60,7 @@ void activateBlockOnTrainDetect(){
 void readUltraSonicSensor(){
   long durationAdee;
   int distanceAdee;
-  for(int i = 0; i < 3; i++){
+  for(int i = 0; i < 2; i++){
      // Clears the trigPin
     digitalWrite(trigPinAdee[i], LOW);
     delayMicroseconds(2);
@@ -74,13 +74,14 @@ void readUltraSonicSensor(){
     durationAdee = pulseIn(echoPinAdee[i], HIGH);
   
     // Calculating the distance
-    distanceAdee = (durationAdee/2) / 29.1;
+    //distanceAdee = (durationAdee/2) / 29.1;
   
     // Prints the distance on the Serial Monitor
-    Serial.println((String)trigPinAdee[i] + " has a Distance of: "  + (String)distanceAdee);
-    Serial.println("  ");
-    if(distanceAdee == 50){
-      trainSpeedAdee = 0;
+    Serial.println((String)trigPinAdee[i] + " has a Distance of: "  + (String)durationAdee);
+    //Serial.println("  ");
+    if(durationAdee <= 1400){
+      handleMotor(127);
+      Serial.println(" hit it");
     }
   }
 }
@@ -163,13 +164,13 @@ void HandleSerialEvent(String a_inputString) //Main Function
 
     if (m_value == "x")
     {
-      digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], HIGH);
       digitalWrite(doTurnOutEnableAdee, LOW);
+      digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], HIGH);
     }
     else if(m_value == "y")
     {
-      digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], LOW);
       digitalWrite(doTurnOutEnableAdee, LOW);
+      digitalWrite(doTakeTurnTurnoutAdee[m_command.toInt()], LOW);
     }else{
       Serial.println("stop wrong command");
     }
