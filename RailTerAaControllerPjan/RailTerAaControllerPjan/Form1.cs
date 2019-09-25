@@ -137,43 +137,36 @@ namespace RailTerAaControllerPjan
             }
         }
 
-        private void tmrSerialReadPjan_Tick(object sender, EventArgs e)
+        private void tbrSpeedPjan_ValueChanged(object sender, EventArgs e)
         {
-            rtbSerialMonitorPjan.Text += serialPortPjan.ReadExisting();
-
-            if (serialPortPjan.ReadLine() == "Led turned on")
-            {
-                halSensorsPjan[0].BackColor = Color.Red;
-            }
-            else if (serialPortPjan.ReadLine() == "Led turned off")
-            {
-                halSensorsPjan[0].BackColor = Color.DarkGray;
-            }
-            //for (int i = 0; i < 9; i++)
-            //{
-            //    serialPortPjan.Write("db" + i);
-            //    Thread.Sleep(10);
-            //    if (serialPortPjan.ReadExisting() == "Train in block " + i + " detected : " + 1)
-            //    {
-            //        halSensorsPjan[i].BackColor = Color.Red;
-            //    }
-            //    else
-            //    {
-            //        halSensorsPjan[i].BackColor = Color.DarkGray;
-            //    }
-            //}
+            serialPortPjan.Write("sp" + tbrSpeedPjan.Value.ToString());
         }
 
-        private void btnTestHal_Click(object sender, EventArgs e)
-        {
-            switch (blockState[1])
-            {
-                case false: blockState[1] = true; break;
-                default: blockState[1] = false;
-                    break;
-            }
-            Thread.Sleep(200);
-            serialPortPjan.Write(Convert.ToInt16(blockState[1]).ToString());
-        }
+        //private void tmrSerialReadPjan_Tick(object sender, EventArgs e)
+        //{
+        //    rtbSerialMonitorPjan.Text += serialPortPjan.ReadExisting();
+
+        //    if (serialPortPjan.ReadLine() == "Led turned on")
+        //    {
+        //        halSensorsPjan[0].BackColor = Color.Red;
+        //    }
+        //    else if (serialPortPjan.ReadLine() == "Led turned off")
+        //    {
+        //        halSensorsPjan[0].BackColor = Color.DarkGray;
+        //    }
+        //    //for (int i = 0; i < 9; i++)
+        //    //{
+        //    //    serialPortPjan.Write("db" + i);
+        //    //    Thread.Sleep(10);
+        //    //    if (serialPortPjan.ReadExisting() == "Train in block " + i + " detected : " + 1)
+        //    //    {
+        //    //        halSensorsPjan[i].BackColor = Color.Red;
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        halSensorsPjan[i].BackColor = Color.DarkGray;
+        //    //    }
+        //    //}
+        //}
     }
 }

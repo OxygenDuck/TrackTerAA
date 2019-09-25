@@ -57,7 +57,10 @@
             this.pnlSensor5Pjan = new System.Windows.Forms.Panel();
             this.rtbSerialMonitorPjan = new System.Windows.Forms.RichTextBox();
             this.tmrSerialReadPjan = new System.Windows.Forms.Timer(this.components);
-            this.btnTestHal = new System.Windows.Forms.Button();
+            this.tbrSpeedPjan = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tbrSpeedPjan)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTurnout1Pjan
@@ -343,19 +346,34 @@
             this.rtbSerialMonitorPjan.TabIndex = 22;
             this.rtbSerialMonitorPjan.Text = "";
             // 
-            // tmrSerialReadPjan
+            // tbrSpeedPjan
             // 
-            this.tmrSerialReadPjan.Tick += new System.EventHandler(this.tmrSerialReadPjan_Tick);
+            this.tbrSpeedPjan.Location = new System.Drawing.Point(509, 473);
+            this.tbrSpeedPjan.Maximum = 255;
+            this.tbrSpeedPjan.Minimum = 10;
+            this.tbrSpeedPjan.Name = "tbrSpeedPjan";
+            this.tbrSpeedPjan.Size = new System.Drawing.Size(326, 45);
+            this.tbrSpeedPjan.TabIndex = 23;
+            this.tbrSpeedPjan.Value = 127;
+            this.tbrSpeedPjan.ValueChanged += new System.EventHandler(this.tbrSpeedPjan_ValueChanged);
             // 
-            // btnTestHal
+            // label1
             // 
-            this.btnTestHal.Location = new System.Drawing.Point(7, 9);
-            this.btnTestHal.Name = "btnTestHal";
-            this.btnTestHal.Size = new System.Drawing.Size(63, 66);
-            this.btnTestHal.TabIndex = 23;
-            this.btnTestHal.Text = "TOUCH ME PUSSY";
-            this.btnTestHal.UseVisualStyleBackColor = true;
-            this.btnTestHal.Click += new System.EventHandler(this.btnTestHal_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(516, 505);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Forward";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(771, 505);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Backward";
             // 
             // form1
             // 
@@ -363,7 +381,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1081, 681);
-            this.Controls.Add(this.btnTestHal);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbrSpeedPjan);
             this.Controls.Add(this.rtbSerialMonitorPjan);
             this.Controls.Add(this.pnlSensor5Pjan);
             this.Controls.Add(this.pnlSensor9Pjan);
@@ -394,7 +414,9 @@
             this.Name = "form1";
             this.Tag = "0";
             this.Text = "RailTerAA Controller";
+            ((System.ComponentModel.ISupportInitialize)(this.tbrSpeedPjan)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -427,7 +449,9 @@
         private System.Windows.Forms.Panel pnlSensor5Pjan;
         private System.Windows.Forms.RichTextBox rtbSerialMonitorPjan;
         private System.Windows.Forms.Timer tmrSerialReadPjan;
-        private System.Windows.Forms.Button btnTestHal;
+        private System.Windows.Forms.TrackBar tbrSpeedPjan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
